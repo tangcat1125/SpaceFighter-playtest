@@ -1,0 +1,39 @@
+{
+  "character": "BambooKaguya",
+  "frameSize": { "w": 256, "h": 256 },
+  "notes": [
+    "All frames must be 256x256 with transparent background.",
+    "Sidewind uses right-wind frames; mirror in code for left wind."
+  ],
+  "sheets": [
+    {
+      "name": "forward",
+      "file": "sheets/bamboo_kaguya_keyed_v2_4x2_256.png",
+      "grid": { "cols": 4, "rows": 2 },
+      "frames": [
+        { "id": "forward_0", "col": 0, "row": 0 },
+        { "id": "forward_1", "col": 1, "row": 0 },
+        { "id": "forward_2", "col": 2, "row": 0 },
+        { "id": "forward_3", "col": 3, "row": 0 }
+      ]
+    },
+    {
+      "name": "sidewind_right",
+      "file": "sheets/bamboo_kaguya_keyed_v2_4x2_256.png",
+      "grid": { "cols": 4, "rows": 2 },
+      "frames": [
+        { "id": "sidewind_0", "col": 0, "row": 1 },
+        { "id": "sidewind_1", "col": 1, "row": 1 }
+      ]
+    },
+    {
+      "name": "headwind",
+      "file": "sheets/bamboo_kaguya_keyed_v2_4x2_256.png",
+      "grid": { "cols": 4, "rows": 2 },
+      "frames": [
+        { "id": "headwind_0", "col": 2, "row": 1 },
+        { "id": "headwind_1", "col": 3, "row": 1 }
+      ]
+    }
+  ]
+}

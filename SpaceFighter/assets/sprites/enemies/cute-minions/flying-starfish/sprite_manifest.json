@@ -1,0 +1,15 @@
+{
+  "enemy": "flying-starfish",
+  "displayName": "Flying Starfish",
+  "frameSize": { "w": 256, "h": 256 },
+  "sourceSheet": "sheet_greenscreen_4x1_256.png",
+  "runtimeSheet": "sheet_keyed_4x1_256.png",
+  "grid": { "cols": 4, "rows": 1 },
+  "frames": [
+    { "id": "laugh", "col": 0, "row": 0 },
+    { "id": "hurt", "col": 1, "row": 0 },
+    { "id": "blink", "col": 2, "row": 0 },
+    { "id": "serious_missile", "col": 3, "row": 0 }
+  ]
+}
+

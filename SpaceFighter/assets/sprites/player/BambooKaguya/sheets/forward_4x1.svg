@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="256" viewBox="0 0 1024 256">
+  <!-- 4 frames, each 256x256. Transparent background. -->
+  <defs>
+    <linearGradient id="bambooGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#98F28A"/>
+      <stop offset="1" stop-color="#2BB35D"/>
+    </linearGradient>
+    <linearGradient id="dressGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF6D6"/>
+      <stop offset="1" stop-color="#FFB98F"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.8" result="b"/>
+      <feColorMatrix in="b" type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0 0 0 .28 0" result="g"/>
+      <feMerge>
+        <feMergeNode in="g"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Base character group centered around (0,0) -->
+    <g id="bambooSeat" filter="url(#glow)">
+      <!-- bamboo -->
+      <g transform="translate(0,0)">
+        <rect x="-12" y="-86" width="24" height="180" rx="10" fill="url(#bambooGrad)" stroke="rgba(0,0,0,.22)" stroke-width="2"/>
+        <path d="M-12,-46 H12" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+        <path d="M-12,-6 H12" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+        <path d="M-12,34 H12" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+      </g>
+
+      <!-- princess (side-sitting) -->
+      <!-- hair -->
+      <path d="M28,-40 C34,-66 12,-82 -16,-74 C-46,-66 -56,-40 -44,-16 C-34,4 -10,18 14,14 C30,10 36,-14 30,-26"
+        fill="#261A1A"/>
+      <!-- face -->
+      <ellipse cx="-6" cy="-50" rx="15" ry="13" fill="#FFE3D5"/>
+      <!-- eyes (open) -->
+      <circle class="eyeL" cx="-11" cy="-52" r="2.2" fill="#261A1A"/>
+      <circle class="eyeR" cx="-2" cy="-52" r="2.2" fill="#261A1A"/>
+      <!-- small mouth -->
+      <path d="M-8,-44 C-5,-42 -2,-42 1,-44" stroke="rgba(120,50,60,.55)" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+      <!-- torso / kimono -->
+      <path d="M4,-40 C26,-34 36,-16 34,6 C32,30 10,46 -16,44 C-40,42 -54,24 -50,2 C-46,-22 -22,-46 4,-40Z"
+        fill="url(#dressGrad)" stroke="rgba(0,0,0,.16)" stroke-width="2"/>
+      <!-- sleeves -->
+      <path d="M-32,-24 C-48,-10 -50,10 -38,20" stroke="#FFE3D5" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M8,-18 C18,-10 22,4 18,18" stroke="#FFE3D5" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+      <!-- legs tucked (side sit) -->
+      <path d="M-10,30 C8,24 22,30 30,42" stroke="rgba(110,80,60,.55)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <g id="speed">
+      <path d="M-96,-18 H-30" stroke="rgba(200,235,255,.35)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M-84,2 H-18" stroke="rgba(200,235,255,.25)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M-74,22 H-10" stroke="rgba(200,235,255,.18)" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- Frame 0: hurried forward -->
+  <g transform="translate(128 138)">
+    <use href="#speed" transform="translate(0,0)"/>
+    <use href="#bambooSeat" transform="rotate(-10) translate(16,-10)"/>
+  </g>
+
+  <!-- Frame 1: more leaning, skirt/hair flutter -->
+  <g transform="translate(384 138)">
+    <use href="#speed" transform="translate(4,-2) scale(1.05)"/>
+    <use href="#bambooSeat" transform="rotate(-16) translate(20,-14)"/>
+    <!-- extra flutter -->
+    <path d="M418,182 C430,190 442,194 452,190" stroke="rgba(255,255,255,.25)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Frame 2: blink -->
+  <g transform="translate(640 138)">
+    <use href="#speed" transform="translate(2,2) scale(1.03)"/>
+    <g transform="rotate(-14) translate(18,-12)">
+      <use href="#bambooSeat"/>
+      <path d="M-14,-52 H-8" stroke="#261A1A" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M-5,-52 H1" stroke="#261A1A" stroke-width="2.4" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Frame 3: recover open eyes -->
+  <g transform="translate(896 138)">
+    <use href="#speed" transform="translate(-2,0) scale(1.08)"/>
+    <use href="#bambooSeat" transform="rotate(-12) translate(18,-12)"/>
+  </g>
+</svg>
+

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="256" viewBox="0 0 512 256">
+  <!-- 2 frames, each 256x256. Headwind: block wind with one hand. -->
+  <defs>
+    <linearGradient id="bambooGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#98F28A"/>
+      <stop offset="1" stop-color="#2BB35D"/>
+    </linearGradient>
+    <linearGradient id="dressGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF6D6"/>
+      <stop offset="1" stop-color="#FFB98F"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.8" result="b"/>
+      <feColorMatrix in="b" type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0 0 0 .28 0" result="g"/>
+      <feMerge>
+        <feMergeNode in="g"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <g id="kaguyaHead" filter="url(#glow)">
+      <!-- bamboo slightly down-tilted as pushing forward -->
+      <g transform="rotate(-10)">
+        <rect x="-12" y="-86" width="24" height="180" rx="10" fill="url(#bambooGrad)" stroke="rgba(0,0,0,.22)" stroke-width="2"/>
+        <path d="M-12,-46 H12" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+        <path d="M-12,-6 H12" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+        <path d="M-12,34 H12" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+      </g>
+
+      <!-- princess -->
+      <path d="M28,-40 C34,-66 12,-82 -16,-74 C-46,-66 -56,-40 -44,-16 C-34,4 -10,18 14,14 C30,10 36,-14 30,-26"
+        fill="#261A1A"/>
+      <ellipse cx="-6" cy="-50" rx="15" ry="13" fill="#FFE3D5"/>
+      <circle cx="-11" cy="-52" r="2.2" fill="#261A1A"/>
+      <circle cx="-2" cy="-52" r="2.2" fill="#261A1A"/>
+      <path d="M-10,-44 C-6,-40 -2,-40 2,-44" stroke="rgba(120,50,60,.55)" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+      <path d="M4,-40 C26,-34 36,-16 34,6 C32,30 10,46 -16,44 C-40,42 -54,24 -50,2 C-46,-22 -22,-46 4,-40Z"
+        fill="url(#dressGrad)" stroke="rgba(0,0,0,.16)" stroke-width="2"/>
+
+      <!-- arm blocking wind (in front) -->
+      <path d="M-2,-34 C-20,-32 -34,-18 -40,0" stroke="#FFE3D5" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <!-- other arm holding -->
+      <path d="M10,-18 C20,-10 24,2 20,18" stroke="#FFE3D5" stroke-width="6" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <g id="headwindLines">
+      <path d="M-12,-46 H-110" stroke="rgba(200,235,255,.35)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M-12,-22 H-96" stroke="rgba(200,235,255,.25)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M-12,0 H-120" stroke="rgba(200,235,255,.20)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M-12,20 H-90" stroke="rgba(200,235,255,.15)" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- Frame 0: start pushing -->
+  <g transform="translate(128 138)">
+    <use href="#headwindLines" transform="translate(0,8)"/>
+    <use href="#kaguyaHead" transform="rotate(-12) translate(18,-14)"/>
+  </g>
+
+  <!-- Frame 1: more effort -->
+  <g transform="translate(384 138)">
+    <use href="#headwindLines" transform="translate(0,12) scale(1.05)"/>
+    <use href="#kaguyaHead" transform="rotate(-18) translate(22,-18)"/>
+    <path d="M392,92 C404,92 414,98 424,110" stroke="rgba(255,255,255,.20)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
+

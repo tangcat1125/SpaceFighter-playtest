@@ -1,0 +1,15 @@
+{
+  "boss": "bigboss-prince",
+  "displayName": "Angry White Prince",
+  "frameSize": { "w": 256, "h": 256 },
+  "sourceSheet": "sheet_greenscreen_4x1_256.png",
+  "runtimeSheet": "sheet_keyed_4x1_256.png",
+  "grid": { "cols": 4, "rows": 1 },
+  "frames": [
+    { "id": "idle_attack", "col": 0, "row": 0 },
+    { "id": "blink", "col": 1, "row": 0 },
+    { "id": "comic_taunt", "col": 2, "row": 0 },
+    { "id": "hurt", "col": 3, "row": 0 }
+  ]
+}
+
