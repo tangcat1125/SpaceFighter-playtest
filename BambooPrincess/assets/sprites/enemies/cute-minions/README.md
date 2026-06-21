@@ -1,6 +1,6 @@
 # Cute Minions
 
-Three cute 2-head-tall enemy sprite sets for the SpaceFighter playtest.
+Three cute 2-head-tall enemy sprite sets for the BambooPrincess playtest.
 
 ## Shared Sprite Rules
 
@@ -19,4 +19,3 @@ Three cute 2-head-tall enemy sprite sets for the SpaceFighter playtest.
 - `winged-octopus/`: winged little octopus
 - `angry-puffer/`: winged angry pufferfish
 - `flying-starfish/`: flying starfish
-
