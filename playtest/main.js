@@ -2544,12 +2544,7 @@
     requestAnimationFrame(frame);
   }
 
-  // Start (first-time users see demo)
-  let hasPlayed = false;
-  try {
-    hasPlayed = localStorage.getItem(LS_HAS_PLAYED) === "1";
-  } catch {}
-  if (hasPlayed) startPlay();
-  else startDemo();
+  // Start directly in play mode for GitHub Pages and local launch.
+  startPlay();
   requestAnimationFrame(frame);
 })();
