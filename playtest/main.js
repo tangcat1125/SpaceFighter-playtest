@@ -43,55 +43,55 @@
   };
   assets.kaguyaSheet.onload = () => (assets.kaguyaReady = true);
   assets.kaguyaSheet.src =
-    "../assets/sprites/player/BambooKaguya/sheets/bamboo_kaguya_keyed_v2_4x2_256.png";
+    "./assets/sprites/player/BambooKaguya/sheets/bamboo_kaguya_keyed_v2_4x2_256.png";
   assets.kaguyaExpr.onload = () => (assets.kaguyaExprReady = true);
   assets.kaguyaExpr.src =
-    "../assets/sprites/player/BambooKaguya/sheets/bamboo_kaguya_expressions_keyed_v2_3x1_256.png";
+    "./assets/sprites/player/BambooKaguya/sheets/bamboo_kaguya_expressions_keyed_v2_3x1_256.png";
   assets.energyHenSheet.onload = () => (assets.energyHenReady = true);
   assets.energyHenSheet.src =
-    "../assets/sprites/enemies/energy-hen/sheet_keyed_4x1_256.png";
+    "./assets/sprites/enemies/energy-hen/sheet_keyed_4x1_256.png";
 
   assets.octopusSheet.onload = () => (assets.octopusReady = true);
   assets.octopusSheet.src =
-    "../assets/sprites/enemies/cute-minions/winged-octopus/sheet_keyed_4x1_256.png";
+    "./assets/sprites/enemies/cute-minions/winged-octopus/sheet_keyed_4x1_256.png";
   assets.pufferSheet.onload = () => (assets.pufferReady = true);
   assets.pufferSheet.src =
-    "../assets/sprites/enemies/cute-minions/angry-puffer/sheet_keyed_4x1_256.png";
+    "./assets/sprites/enemies/cute-minions/angry-puffer/sheet_keyed_4x1_256.png";
   assets.starfishSheet.onload = () => (assets.starfishReady = true);
   assets.starfishSheet.src =
-    "../assets/sprites/enemies/cute-minions/flying-starfish/sheet_keyed_4x1_256.png";
+    "./assets/sprites/enemies/cute-minions/flying-starfish/sheet_keyed_4x1_256.png";
 
   assets.raijinSheet.onload = () => (assets.raijinReady = true);
   assets.raijinSheet.src =
-    "../assets/sprites/bosses/midboss-raijin-girl/sheet_keyed_4x1_256.png";
+    "./assets/sprites/bosses/midboss-raijin-girl/sheet_keyed_4x1_256.png";
   assets.bossPrinceSheet.onload = () => (assets.bossPrinceReady = true);
   assets.bossPrinceSheet.src =
-    "../assets/sprites/bosses/bigboss-prince/sheet_keyed_4x1_256.png";
+    "./assets/sprites/bosses/bigboss-prince/sheet_keyed_4x1_256.png";
   assets.bossRichSheet.onload = () => (assets.bossRichReady = true);
   assets.bossRichSheet.src =
-    "../assets/sprites/bosses/bigboss-richman/sheet_keyed_4x1_256.png";
+    "./assets/sprites/bosses/bigboss-richman/sheet_keyed_4x1_256.png";
   assets.bossShogunSheet.onload = () => (assets.bossShogunReady = true);
   assets.bossShogunSheet.src =
-    "../assets/sprites/bosses/bigboss-shogun/sheet_keyed_4x1_256.png";
+    "./assets/sprites/bosses/bigboss-shogun/sheet_keyed_4x1_256.png";
 
   // Custom stage base tile (user-provided). If missing, we fall back to procedural backgrounds.
   assets.bgStage.onload = () => (assets.bgStageReady = true);
   assets.bgStage.src =
-    "../assets/stages/white-prince/custom/layer0_custom_tile_1024.png";
+    "./assets/stages/white-prince/custom/layer0_custom_tile_1024.png";
   // Optional storm variant tile
   assets.bgStageStorm.onload = () => (assets.bgStageStormReady = true);
   assets.bgStageStorm.src =
-    "../assets/stages/white-prince/custom/layer0_custom_storm_tile_1024.png";
+    "./assets/stages/white-prince/custom/layer0_custom_storm_tile_1024.png";
 
   assets.cloudClear.onload = () => (assets.cloudClearReady = true);
   assets.cloudClear.src =
-    "../assets/stages/white-prince/01_bamboo-grove/layer2_clouds_clear_keyed_1024x512.png";
+    "./assets/stages/white-prince/01_bamboo-grove/layer2_clouds_clear_keyed_1024x512.png";
   assets.cloudWindy.onload = () => (assets.cloudWindyReady = true);
   assets.cloudWindy.src =
-    "../assets/stages/white-prince/02_seaside-island/layer2_clouds_windy_keyed_1024x512.png";
+    "./assets/stages/white-prince/02_seaside-island/layer2_clouds_windy_keyed_1024x512.png";
   assets.cloudStorm.onload = () => (assets.cloudStormReady = true);
   assets.cloudStorm.src =
-    "../assets/stages/white-prince/03_open-sea-storm/layer2_clouds_storm_keyed_1024x512.png";
+    "./assets/stages/white-prince/03_open-sea-storm/layer2_clouds_storm_keyed_1024x512.png";
 
   function drawFrameImage(img, sx, sy, sw, sh, dx, dy, dw, dh) {
     ctx.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh);
@@ -142,7 +142,7 @@
   const isPressed = (code) => pressed.has(code);
 
   // ---------- Audio (BGM + simple SFX) ----------
-  const bgm = new Audio("../assets/audio/bgm/Ascent_of_the_Bamboo_Grove.mp3");
+  const bgm = new Audio("./assets/audio/bgm/Ascent_of_the_Bamboo_Grove.mp3");
   bgm.loop = true;
   bgm.volume = 0.35;
   let bgmStarted = false;
