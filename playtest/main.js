@@ -81,7 +81,7 @@
   // Optional storm variant tile
   assets.bgStageStorm.onload = () => (assets.bgStageStormReady = true);
   assets.bgStageStorm.src =
-    "./assets/stages/white-prince/custom/layer0_custom_storm_tile_1024.png";
+    "./assets/stages/white-prince/custom/layer0_custom_tile_1024.png";
 
   assets.cloudClear.onload = () => (assets.cloudClearReady = true);
   assets.cloudClear.src =
